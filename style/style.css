@@ -148,6 +148,7 @@ body {
 
 }
 
+
 .row .content {
     height: 100%;
     width: 50%;
@@ -170,4 +171,25 @@ body {
     border-radius: 10px;
     width: 80vw;
     height: 50vh;
+}
+.binario button{
+    width: 6vw;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+    background-color: var(--main-color);
+    color: #000;
+    margin-top: 1vh;
+}
+button:hover{
+    background-color: rgb(255, 255, 13);
+}
+
+input{
+    width: 12vw;
+    height: 2.5vh;
+    border-radius: 9px;
+    background-color: #929292;
+    font-weight: 600;
+    color: #fff;
 }
