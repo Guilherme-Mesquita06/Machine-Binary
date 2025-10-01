@@ -81,41 +81,45 @@
 <script>
 
   function decimal() {
-    var decimal = document.getElementById("number").value
-    var tempDecimal, rem, binary = 0, place = 1 // Declarando multiplas variaveis
-    tempDecimal  = decimal;
+    var decimal = Number(number.value)
+    var tempDecimal, resto, binario = 0, posicao = 1 // Declarando multiplas variaveis
+    tempDecimal = decimal; //temp de
     while (tempDecimal > 0) { //Só para quando o valor for 0
-      rem = tempDecimal % 2; //divide por 2 e pega o resto
-      binary += rem * place;  // Resto * posiçãoEmBinario
+      resto = tempDecimal % 2; //divide por 2 e pega o resto
+      binario += resto * posicao;  // Resto * posiçãoEmBinario
       tempDecimal = parseInt(tempDecimal / 2); //Converte string para inteiro da esquerda para diretita 
-      place *= 10
+      posicao *= 10
     }
-    var binario = document.getElementById("resultadoBinario").value = binary
+    var decimal = document.getElementById("resultadoBinario").value = binario
 
   }
   function Converter() {
-   var binario = numberBinary.value;
-   var tempBinario, mult, decimal = 0, i= 0
-   var tempBinario = [binario.toString()];
+    var binario = numberBinary.value;
+    var tempBinario, mult, decimal = 0, i = 0
+    var tempBinario = [binario.toString()];
     var tamanho = binario.length
-    
 
 
-      for(var j = 0; j<tamanho; j++){
-            console.log(binario.charAt(j) )
-       if (binario.charAt(j) == '1'){
-        decimal +=i**2;
-       }
-       console.log(i)
-        console.log(decimal)
-        i++;
-        
+    // Parametro 1: Declarar o contador
+    // Parametro 2: Declarar condição
+    // Parametro 3: incrementar de 1 em 1 
+    for (var j = 0; j < tamanho; j++) {
+
+      console.log(binario.charAt(j))
+
+      if (binario.charAt(j) == '1') {
+        decimal += 2 ** i;
       }
-        decimal = decimal + 1 
-          var binario = document.getElementById("resultadoDecimal").value = decimal
+      console.log(i)
+      console.log(decimal)
+      i++;
 
-  
-}
+    }
+
+    var binario = document.getElementById("resultadoDecimal").value = decimal
+
+
+  }
 
 
   function converter() {
