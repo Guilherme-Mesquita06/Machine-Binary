@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="/style/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet" />
+
   <title>Machine</title>
 </head>
 
@@ -87,10 +87,10 @@
           <div class="BoxCalc">
             <div class="decimalBinario">
               <p>Digite um numero em octal:</p>
-              <input id="number" type="number" placeholder="Ex: 42" name="number">
+              <input id="iptOctal" type="number" placeholder="Ex: 42" name="number">
               <p>Valor em binario</p>
               <input id="resultadoBinario" name="binary" type="text" placeholder=""> <br> <br>
-              <button class="btn2" onclick="decimal()">Converter</button> <br> <br> <br> <br>
+              <button class="btn2" onclick="converterOctal()">Converter</button> <br> <br> <br> <br>
             </div>
             <div class="binarioDecimal">
               <p>Digite um numero em binario:</p>
@@ -119,10 +119,10 @@
           <div class="BoxCalc">
             <div class="decimalBinario">
               <p>Digite um numero hexadecimal:</p>
-              <input id="number" type="number" placeholder="Ex: 42" name="number">
+              <input id="iptHexadecimal" type="number" placeholder="Ex: 42" name="number">
               <p>Valor em binario</p>
               <input id="resultadoBinario" name="binary" type="text" placeholder=""> <br> <br>
-              <button class="btn2" onclick="decimal()">Converter</button> <br> <br> <br> <br>
+              <button class="btn2" onclick="converterHexa()">Converter</button> <br> <br> <br> <br>
             </div>
             <div class="binarioDecimal">
               <p>Digite um numero em binario:</p>
@@ -159,7 +159,7 @@
   }
   function Converter() {
     var binario = numberBinary.value;
-    var tempBinario, mult, decimal = 0, i = 0
+    var tempBinario, decimal = 0, i = 0
     var tempBinario = [binario.toString()];
     var tamanho = binario.length
 
@@ -187,12 +187,47 @@
   }
 
 
-  function converter() {
-    var decimal = Number(demo1.value);
+  function converterOctal() {
 
-    demo2.innerHTML = decimal.toString(8);
-    demo3.innerHTML = decimal.toString(16);
-    demo4.innerHTML = decimal.toString(2);
+    var octal = iptOctal.value
+    console.log(octal)
+    var tamanho = octal.length
+    console.log (tamanho)
+    
+     var i = 0;
+
+     var binario = []
+
+
+        while(i < tamanho){
+        
+         console.log(octal.charAt(i))
+
+
+
+         if (octal.charAt(i) == '1'){
+          binario.push('001')
+         }else if (octal.charAt(i) == '2'){
+          binario.push('010')
+         }else if (octal.charAt(i) == '3'){
+          binario.push('011')
+         }else if (octal.charAt(i) == '4'){
+          binario.push('100')
+         }else if (octal.charAt(i) == '5'){
+          binario.push('101')
+         }else if (octal.charAt(i) == '6'){
+            binario.push('110')
+          }else{
+            binario.push('111')
+          }
+
+Math.floor 
+      i++
+    }
+   var bin = [`${binario}`]
+    console.log( bin )
+
+    
   }
 </script>
 
