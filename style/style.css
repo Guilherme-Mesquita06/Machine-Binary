@@ -193,3 +193,10 @@ input{
     font-weight: 600;
     color: #fff;
 }
+.boxCalculado .convertido{
+    margin-top: 10vh;
+    font-weight: 600;
+    color: #fff;
+    font-size: 100px;
+    
+}

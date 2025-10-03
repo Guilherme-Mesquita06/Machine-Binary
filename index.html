@@ -76,7 +76,7 @@
   
     <section class="binario" id="octal">
 
-      <h2 class="title">Conversor de <span class="bin">octal</span> para <span>binario</span></h2>
+      <h2 class="title">Valor em <span class="bin">octal</span> para <span>binario</span></h2>
 
       <div class="row">
         <div class="container-img">
@@ -84,21 +84,8 @@
         </div>
         <div class="content">
           <h3>Conversor</h3>
-          <div class="BoxCalc">
-            <div class="decimalBinario">
-              <p>Digite um numero em octal:</p>
-              <input id="iptOctal" type="number" placeholder="Ex: 42" name="number">
-              <p>Valor em binario</p>
-              <input id="resultadoBinario" name="binary" type="text" placeholder=""> <br> <br>
-              <button class="btn2" onclick="converterOctal()">Converter</button> <br> <br> <br> <br>
-            </div>
-            <div class="binarioDecimal">
-              <p>Digite um numero em binario:</p>
-              <input id="numberBinary" type="number" placeholder="Ex: 0101" name="number">
-              <p>Valor em decimal</p>
-              <input id="resultadoDecimal" type="text" placeholder="Ex: 25"> <br> <br>
-              <button class="btn2" onclick="Converter()">Converter</button>
-            </div>
+          <div class="boxCalculado">
+              <div class="convertido"  id="demo2"></div>
           </div>
         </div>
       </div>
@@ -108,7 +95,7 @@
       
     <section class="binario" id="hexadecimal">
 
-      <h2 class="title">Conversor de <span class="bin">HEXADECIMAL</span> para <span>binario</span></h2>
+      <h2 class="title">Valor em <span class="bin">HEXADECIMAL</span></h2>
 
       <div class="row">
         <div class="container-img">
@@ -116,21 +103,10 @@
         </div>
         <div class="content">
           <h3>Conversor</h3>
-          <div class="BoxCalc">
-            <div class="decimalBinario">
-              <p>Digite um numero hexadecimal:</p>
-              <input id="iptHexadecimal" type="number" placeholder="Ex: 42" name="number">
-              <p>Valor em binario</p>
-              <input id="resultadoBinario" name="binary" type="text" placeholder=""> <br> <br>
-              <button class="btn2" onclick="converterHexa()">Converter</button> <br> <br> <br> <br>
-            </div>
-            <div class="binarioDecimal">
-              <p>Digite um numero em binario:</p>
-              <input id="numberBinary" type="number" placeholder="Ex: 0101" name="number">
-              <p>Valor em decimal</p>
-              <input id="resultadoDecimal" type="text" placeholder="Ex: 25"> <br> <br>
-              <button class="btn2" onclick="Converter()">Converter</button>
-            </div>
+          <div class="boxCalculado">
+              <div class="convertido" id="demo3"></div>
+
+      
           </div>
         </div>
       </div>
@@ -141,6 +117,7 @@
   </div>
 </body>
 <script>
+
 
   function decimal() {
     var decimal = Number(number.value)
@@ -154,6 +131,9 @@
       posicao *= 10 // posicionando o numero de casas
       
     }
+
+     demo2.innerHTML = decimal.toString(8);
+     demo3.innerHTML = decimal.toString(16);
     var decimal = document.getElementById("resultadoBinario").value = binario
 
   }
@@ -183,52 +163,52 @@
 
     var binario = document.getElementById("resultadoDecimal").value = decimal
 
-
+  
   }
 
 
-  function converterOctal() {
+//   function converterOctal() {
 
-    var octal = iptOctal.value
-    console.log(octal)
-    var tamanho = octal.length
-    console.log (tamanho)
+//     var octal = iptOctal.value
+//     console.log(octal)
+//     var tamanho = octal.length
+//     console.log (tamanho)
     
-     var i = 0;
+//      var i = 0;
 
-     var binario = []
+//      var binario = []
 
 
-        while(i < tamanho){
+//         while(i < tamanho){
         
-         console.log(octal.charAt(i))
+//          console.log(octal.charAt(i))
 
 
 
-         if (octal.charAt(i) == '1'){
-          binario.push('001')
-         }else if (octal.charAt(i) == '2'){
-          binario.push('010')
-         }else if (octal.charAt(i) == '3'){
-          binario.push('011')
-         }else if (octal.charAt(i) == '4'){
-          binario.push('100')
-         }else if (octal.charAt(i) == '5'){
-          binario.push('101')
-         }else if (octal.charAt(i) == '6'){
-            binario.push('110')
-          }else{
-            binario.push('111')
-          }
+//          if (octal.charAt(i) == '1'){
+//           binario.push('001')
+//          }else if (octal.charAt(i) == '2'){
+//           binario.push('010')
+//          }else if (octal.charAt(i) == '3'){
+//           binario.push('011')
+//          }else if (octal.charAt(i) == '4'){
+//           binario.push('100')
+//          }else if (octal.charAt(i) == '5'){
+//           binario.push('101')
+//          }else if (octal.charAt(i) == '6'){
+//             binario.push('110')
+//           }else{
+//             binario.push('111')
+//           }
 
-Math.floor 
-      i++
-    }
-   var bin = [`${binario}`]
-    console.log( bin )
+// Math.floor 
+//       i++
+//     }
+//    var bin = [`${binario}`]
+//     console.log( bin )
 
     
-  }
+//   }
 </script>
 
 </html>
